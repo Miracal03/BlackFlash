@@ -1,0 +1,13 @@
+{
+  "name": "whiteflash",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Real-time screen sampling with a Gooch-inspired White Flash filter",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node node_modules/electron/cli.js ."
+  },
+  "devDependencies": {
+    "electron": "^37.2.6"
+  }
+}
