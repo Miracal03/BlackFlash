@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhiteFlash</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <video id="capture" autoplay muted playsinline></video>
+  <canvas id="stage"></canvas>
+  <section id="controls" aria-label="白闪控制台">
+    <header><strong>WHITE FLASH</strong><span id="status">正在连接屏幕</span></header>
+    <p class="safety">提示：动态闪光可能引起不适。请从低强度开始，并在不适时立即退出。</p>
+    <label>滤镜强度 <output id="intensityOut">82%</output><input id="intensity" type="range" min="0" max="1" step="0.01" value="0.82"></label>
+    <label>黑白色度 <output id="monochromeOut">86%</output><input id="monochrome" type="range" min="0" max="1" step="0.01" value="0.86"></label>
+    <label>笔触浓度 <output id="edgeOut">105%</output><input id="edge" type="range" min="0" max="2" step="0.01" value="1.05"></label>
+    <label>墨块层次 <output id="thresholdOut">48%</output><input id="threshold" type="range" min="0" max="1" step="0.01" value="0.48"></label>
+    <label>白闪频率 <output id="pulseOut">0.4 Hz</output><input id="pulse" type="range" min="0" max="1" step="0.05" value="0.35"></label>
+    <label>白闪强度 <output id="flashOut">24%</output><input id="flash" type="range" min="0" max="0.55" step="0.01" value="0.24"></label>
+    <div class="actions"><button id="passthrough">鼠标穿透</button><button id="quit">退出</button></div>
+    <footer>Ctrl+Shift+W 面板 · Ctrl+Shift+P 穿透 · Ctrl+Shift+Q 退出</footer>
+  </section>
+  <div id="error" hidden></div>
+  <script src="app.js"></script>
+</body>
+</html>
